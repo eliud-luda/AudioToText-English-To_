@@ -1,0 +1,41 @@
+{% extends "home.html" %}
+
+
+{% block main %}
+
+
+<div class="w3-content" style="max-width:1500px">
+
+    <table style="align-content: center;">
+        <tr>
+            <th>English</th>
+            <th>Swahili</th>
+            <th>Chinese</th>
+            <th>Japanase</th>
+            <th>Spanish</th>
+        </tr>
+        <tr>
+            <td>{{english}}</td>
+            <td>{{swahili}}</td>
+            <td>{{chinese}}</td>
+            <td>{{japanase}}</td>
+            <td>{{spanish}}</td>
+        </tr>
+    </table>
+</div>
+
+
+{% endblock %}
+
+
+{% block footer%}
+<br>
+<br>
+<br>
+<div class="w3-padding-22">
+    <div class="w3-bar w3-border">
+        <a href="/" class="w3-bar-item w3-button">Home</a>
+        <a href="/transcribe" class="w3-bar-item w3-button">Transcribe</a>
+    </div>
+</div>
+{% endblock %}

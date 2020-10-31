@@ -1,0 +1,43 @@
+{% extends "home.html" %}
+
+
+{% block main %}
+
+<div class="w3-content" style="max-width:1500px">
+
+    <div id="speechContainer" >
+        <h1 style="text-align: center; color: skyblue;">Upload new File</h1>
+        <form class="w3-container" method="post" enctype="multipart/form-data">
+            <input  class="w3-input w3-border" type="file" name="file"/>
+            <br>
+            <br>
+            <input  class="w3-input w3-border" type="submit" id="submitButton" value="Transcribe"/>
+        </form>
+    
+        {% if transcript != "" %}
+            <div id="speechTranscriptContainer">
+                <h1>Transcript</h1>
+                <p id="speechText" style="text-align: center; color: mediumturquoise; font-size: medium;">{{ transcript }}</p>
+            </div>
+        {% endif %}
+    </div> 
+</div>
+
+
+{% endblock %}
+
+
+{% block footer%}
+<br>
+<br>
+<br>
+
+<div class="w3-padding-22">
+    <div class="w3-bar w3-border">
+        <a href="/" class="w3-bar-item w3-button">Home</a>
+        <a href="/language_table" class="w3-bar-item w3-button">Language</a>
+    </div>
+</div>
+{% endblock %}
+
+
